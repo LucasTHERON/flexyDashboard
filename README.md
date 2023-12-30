@@ -11,3 +11,4 @@ Dashboards are very common in web developpement, that's why the code is basic: i
 
 # Demo
 <video src='flexydashboard-video.mp4' width=180/>
+<a href="https://codepen.io/LTSERVICES/pen/JjzYjQj">Try it in codepen !</a>
