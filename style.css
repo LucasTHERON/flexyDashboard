@@ -1,0 +1,216 @@
+/*************************************************/
+/* ALL THE PROPERTIES WITH STARS NEXT TO IT ARE  */
+/* IMPORTANT TO MAKE THE TABLE WORK. BE CAREFULL */
+/* IF YOU TOUCH IT                               */
+/*************************************************/
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgb(11, 0, 57) 93.2% );
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: 900;
+    width: 95%;
+    max-width: 980px;
+    margin: 30px auto;
+    font-size: 45px;
+    color: rgb(241, 241, 241);
+    margin-top: 70px;
+}
+
+.infos {
+    width: 95%;
+    max-width: 980px;
+    color: white;
+    margin: auto;
+}
+
+.container {
+    border: solid 3px black;
+    max-width: 980px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.header {
+    font-weight: 600;
+    display: grid; /*****/
+    grid-gap: 0px; /*****/
+    grid-auto-flow: column; /*****/
+    border-bottom: 3px solid black;
+    grid-template-columns: 1fr 3fr 3fr 4fr 3fr 8fr 1fr; /*****/
+}
+
+.header div {
+    color: #f1f1f1;
+    background-color: darkslategrey;
+    border-right: black 1px solid;
+    padding: 10px 22px;
+    position: relative;
+    font-size: 14px;
+}
+
+.emptyCell{
+    padding: 5px !important;
+}
+
+.headerContent:hover {
+    cursor:default;
+}
+
+.body {
+    position: relative;
+    font-size: 14px;
+}
+
+.line {
+    display: grid; /*****/
+    grid-gap: 0px;
+    grid-template-columns: 1fr 3fr 3fr 4fr 3fr 8fr 1fr; /*****/
+}
+
+.line:nth-of-type(odd) {
+    background-color: rgb(219, 211, 242);
+}
+
+.line:nth-of-type(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.line.moving {
+    position: absolute; /*****/
+    width: 100%; /*****/
+    z-index: 1; /*****/
+    background-color: #ffffff;
+    box-shadow: inset 0px 0px 0px 1px orangered;
+    opacity: 0.95;
+}
+
+.content,
+.deleteBtn,
+.moveBtn {
+    position: relative; /*****/
+    padding: 10px 22px;
+    border-right: 1px solid rgb(204, 202, 202);
+    overflow: hidden;
+}
+
+.content:hover{
+    cursor: pointer;
+}
+
+.moveBtn, .deleteBtn {
+    text-align: center;
+    padding: 10px;
+}
+
+.moveBtn{
+    font-size: 18px;
+}
+
+.moveBtn:hover {
+    cursor: grab;
+}
+
+.deleteBtn {
+    color: red;
+    font-weight: bold;
+    transition: all 0.1s linear;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transition: all 0.1s linear;
+}
+
+
+.addLineBtn {
+    background-color: rgb(216, 203, 203);
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    animation: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.addLineBtn:hover {
+    background-color: darkslategrey;
+    color: white;
+    cursor: pointer;
+    animation: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.newValueInput {
+    display: block; /*****/
+    width: 100%;
+    height: 100%;
+    height: 1.5em;
+    padding: 10px 22px;
+    border: 0;
+    position: absolute; /*****/
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    top: 0; /*****/
+    left: 0; /*****/
+}
+
+.landingLine {
+    width: 100%; /*****/
+    height: 25px; /*****/
+    background-color: rgb(74, 74, 74);
+    transition: all 0.2s ease-in;
+}
+
+.saveBtn {
+    margin: 20px auto;
+    display: block;
+    background-color: darkslategrey;
+    border-radius: 8px;
+    padding: 10px 19px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    opacity: 0.4; /*****/
+    transition: all 0.1s ease-in;
+}
+
+.saveBtn.unlocked {
+    opacity: 1; /*****/
+}
+
+.saveBtn.unlocked:hover {
+    cursor: pointer;
+    background-color: #141414;
+    transition: all 0.2s ease-in;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.414);
+}
+
+.down:after, .up:after{
+    content:'v';
+    display: block;
+    position: absolute;
+    right: 2px;
+    top: 10px;
+    color: darkslategray;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.up:after{
+    transform: rotate(180deg);
+}
