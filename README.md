@@ -8,3 +8,6 @@ The goal of this project is to prepare easy and reusable sample code for your ta
 Dashboards are very common in web developpement, that's why the code is basic: it has to be easy to implement and edit
 
 ![alt txt](flexydashboard-js.png "Javascript code")
+
+# Demo
+<video src='flexydashboard-video.mp4' width=180/>
