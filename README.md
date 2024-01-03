@@ -11,4 +11,4 @@ Dashboards are very common in web developpement, that's why the code is basic: i
 
 # Demo
 ![alt txt](flexydashboard-gif.gif "Demo")
-<a href="https://codepen.io/LTSERVICES/pen/JjzYjQj">Try it in codepen !</a>
+<a target="_blank" href="https://codepen.io/LTSERVICES/pen/JjzYjQj">Try it in codepen !</a>
